@@ -4,12 +4,10 @@
  * @var \Cake\Datasource\EntityInterface[]|\Cake\Collection\CollectionInterface $customers
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Customer'), ['action' => 'add']) ?></li>
-    </ul>
-</nav>
+
+        <?= __('Actions') ?> <br><br>
+        <button><?= $this->Html->link(__('New Customer'), ['action' => 'add']) ?></li></button>
+<hr>
 <div class="customers index large-9 medium-8 columns content">
     <h3><?= __('Customers') ?></h3>
     <table cellpadding="0" cellspacing="0">

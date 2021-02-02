@@ -6,7 +6,7 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     
-        <legend><?= __('Add Pro') ?></legend>
+        <legend><?= __('Add Product') ?></legend>
         
 
     
@@ -26,4 +26,6 @@
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
+    <br>
+    <hr>
 </div>

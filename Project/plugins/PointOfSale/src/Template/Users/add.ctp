@@ -4,13 +4,6 @@
  * @var \Cake\Datasource\EntityInterface $user
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
-    </ul>
-</nav>
-
 
 <?php
 $file = '';
@@ -28,9 +21,12 @@ if (file_exists($file)) {
 } else {
 ?>
 <div>
+
     <div class="login_wrapper">
+
         <div class="animate form login_form">
             <section class="login_content">
+
                 <?= $this->Form->create($user) ?>
                     <h1>Register</h1>
 

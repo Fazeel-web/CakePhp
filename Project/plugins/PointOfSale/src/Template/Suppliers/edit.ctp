@@ -4,20 +4,17 @@
  * @var \Cake\Datasource\EntityInterface $supplier
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Form->postLink(
+    <?= __('Actions') ?><br><br>
+        <button><?= $this->Form->postLink(
                 __('Delete'),
                 ['action' => 'delete', $supplier->id],
                 ['confirm' => __('Are you sure you want to delete # {0}?', $supplier->id)]
             )
-        ?></li>
-        <li><?= $this->Html->link(__('List Suppliers'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Pros'), ['controller' => 'Pros', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Pro'), ['controller' => 'Pros', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
+        ?></button>
+        <button><?= $this->Html->link(__('List Suppliers'), ['action' => 'index']) ?></button>
+        <button><?= $this->Html->link(__('List Pros'), ['controller' => 'Pros', 'action' => 'index']) ?></button>
+        <button><?= $this->Html->link(__('New Pro'), ['controller' => 'Pros', 'action' => 'add']) ?></button>
+<hr>
 <div class="suppliers form large-9 medium-8 columns content">
     <?= $this->Form->create($supplier) ?>
     <fieldset>

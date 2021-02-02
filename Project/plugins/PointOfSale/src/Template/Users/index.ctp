@@ -4,12 +4,9 @@
  * @var \Cake\Datasource\EntityInterface[]|\Cake\Collection\CollectionInterface $users
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?></li>
-    </ul>
-</nav>
+    <?= __('Actions') ?><br><br>
+        <button><?= $this->Html->link(__('New User'), ['action' => 'add']) ?></button>
+<hr>
 <div class="users index large-9 medium-8 columns content">
     <h3><?= __('Users') ?></h3>
     <table cellpadding="0" cellspacing="0">
@@ -17,7 +14,7 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col" style="padding-left:40px;"><?= $this->Paginator->sort('Email') ?></th>
-                <th scope="col" style="padding-left:40px;"><?= $this->Paginator->sort('Password') ?></th>
+                
                 <th scope="col" style="padding-left:40px;" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -26,7 +23,7 @@
             <tr>
                 <td><?= $this->Number->format($user->id) ?></td>
                 <td style="padding-left:40px;"><?= h($user->Email) ?></td>
-                <td style="padding-left:40px;"><?= h($user->Password) ?></td>
+                
                 <td class="actions" style="padding-left:40px;">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $user->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
