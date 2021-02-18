@@ -11,8 +11,8 @@
         <button>><?= $this->Html->link(__('New Customer'), ['action' => 'add']) ?> </button>
 <hr>
 <div class="customers view large-9 medium-8 columns content">
-    <h3><?= h($customer->name) ?></h3>
-    <table class="vertical-table">
+    
+    <table class="vertical-table table w-100">
         <tr>
             <th scope="row" style="padding-top:15px;"><?= __('Name') ?></th>
             <td style="padding-top:15px; padding-left:15px;"><?= h($customer->name) ?></td>

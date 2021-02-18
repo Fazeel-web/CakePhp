@@ -1,7 +1,7 @@
 <?php
 use Migrations\AbstractMigration;
 
-class CreateAdmins extends AbstractMigration
+class CreatCustomers extends AbstractMigration
 {
     /**
      * Change Method.
@@ -12,13 +12,8 @@ class CreateAdmins extends AbstractMigration
      */
     public function change()
     {
-        $table = $this->table('admins');
+        $table = $this->table('customers');
         $table->addColumn('name', 'string', [
-            'default' => null,
-            'limit' => 255,
-            'null' => false,
-        ]);
-        $table->addColumn('email', 'string', [
             'default' => null,
             'limit' => 255,
             'null' => false,

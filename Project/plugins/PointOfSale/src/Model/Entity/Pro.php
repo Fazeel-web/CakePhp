@@ -13,8 +13,10 @@ use Cake\ORM\Entity;
  * @property int $quantity
  * @property string $image
  * @property int|null $category_id
+ * @property int|null $supplier_id
  *
  * @property \PointOfSale\Model\Entity\Category $category
+ * @property \PointOfSale\Model\Entity\Supplier $supplier
  * @property \PointOfSale\Model\Entity\Supplier[] $suppliers
  */
 class Pro extends Entity
@@ -37,5 +39,7 @@ class Pro extends Entity
         'category_id' => true,
         'category' => true,
         'suppliers' => true,
+        'supplier' => true,
+        'supplier_id' => true,
     ];
 }

@@ -1,7 +1,7 @@
 <?php
 use Migrations\AbstractMigration;
 
-class CreateCustomers extends AbstractMigration
+class CreatUsers extends AbstractMigration
 {
     /**
      * Change Method.
@@ -11,16 +11,14 @@ class CreateCustomers extends AbstractMigration
      * @return void
      */
     public function change()
-    {
-        $table = $this->table('customers');
-        $table->addColumn('name', 'string', [
+    { $table = $this->table('users');
+        $table->addColumn('Email', 'string', [
             'default' => null,
             'limit' => 255,
             'null' => false,
         ]);
-        $table->addColumn('phone', 'string', [
+        $table->addColumn('Password', 'string', [
             'default' => null,
-            'limit' => 255,
             'null' => false,
         ]);
         $table->create();

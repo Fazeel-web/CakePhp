@@ -3,6 +3,7 @@ namespace PointOfSale\Controller;
 
 use PointOfSale\Controller\AppController;
 use App\Model\Table\CategoriesTable;
+use App\Model\Table\SuppliersTable;
 
 /**
  * Pros Controller
@@ -20,8 +21,7 @@ class ProsController extends AppController
         parent::initialize();
         
         $this->loadModel('Categories');
-
-
+        $this->loadModel('Suppliers');
 
     }
     /**
@@ -53,6 +53,7 @@ class ProsController extends AppController
         ]);
 
         $this->set('pro', $pro);
+        
     }
 
     private function uploadImage($pro)
@@ -92,19 +93,21 @@ class ProsController extends AppController
      */
     public function add()
     {
+        
         $pro = $this->Pros->newEntity();
         $result = $this->uploadImage($pro);
         if ($this->request->is('post')) {
             $pro = $this->Pros->patchEntity($pro, $this->request->getData());
             if ($this->Pros->save($pro)) {
-                $this->Flash->success(__('The pro has been saved.'));
+                $this->Flash->success(__('The product has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The pro could not be saved. Please, try again.'));
+            $this->Flash->error(__('The product could not be saved. Please, try again.'));
         }
         $categories = $this->Pros->Categories->find('list', ['limit' => 200]);
-        $this->set(compact('pro', 'categories'));
+        $suppliers = $this->Pros->Suppliers->find('list', ['limit' => 200]);
+        $this->set(compact('pro', 'categories','suppliers'));
     }
 
     /**
@@ -131,7 +134,8 @@ class ProsController extends AppController
             $this->Flash->error(__('The pro could not be saved. Please, try again.'));
         }
         $categories = $this->Pros->Categories->find('list', ['limit' => 200]);
-        $this->set(compact('pro', 'categories'));
+        $suppliers = $this->Pros->Suppliers->find('list', ['limit' => 200]);
+        $this->set(compact('pro', 'categories','suppliers'));
     }
 
     /**

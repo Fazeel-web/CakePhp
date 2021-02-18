@@ -27,27 +27,23 @@
         
         <hr>
 <div class="categories view large-9 medium-8 columns content">
-    <h3><?= h($category->name) ?></h3>
-    <table class="vertical-table">
+    <table class="vertical-table table w-100">
         <tr>
-            <th scope="row" style="padding-top:15px;"><?= __('Name') ?></th>
-            <td style="padding-top:15px; margin-left:10px;"><?= h($category->name) ?></td>
+            <th scope="row" style="padding-top:15px;" class="col-sm-1"><?= __('Name') ?></th>
+            <td style="padding-top:15px; margin-left:10px;"class="col-sm-11"><?= h($category->name) ?></td>
         </tr>
         <tr> 
-            <th scope="row" style="padding-top:15px;"><?= __('Description') ?></th>
-            <td style="padding-top:15px; padding-left:15px;"><?= h($category->description) ?></td>
+            <th scope="row" style="padding-top:15px;" class="col-sm-1"><?= __('Description') ?></th>
+            <td style="padding-top:15px; padding-left:15px;" class="col-sm-11"><?= h($category->description) ?></td>
         </tr>
-        <tr>
-            <th scope="row" style="padding-top:15px;"><?= __('Id') ?></th>
-            <td style="padding-top:15px;"><?= $this->Number->format($category->id) ?></td>
-        </tr>
+
     </table>
     <hr>
     <div class="related">
         <h4><?= __('Related Products') ?></h4>
-<hr>
+
         <?php if (!empty($category->pros)): ?>
-        <table cellpadding="0" cellspacing="0">
+        <table cellpadding="0" cellspacing="0" class="table w-100">
             <tr>
                 <th scope="col" style="padding-left:15px;"><?= __('Id') ?></th>
                 <th scope="col" style="padding-left:15px;"><?= __('Name') ?></th>

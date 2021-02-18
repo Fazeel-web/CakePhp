@@ -30,6 +30,7 @@
 
             echo $this->Html->image( $pro->image, ['border' => '0', 'data-src' => $pro->image, 'class' => 'img-responsive','style'=>'width:200px; height:100px;']);
             echo $this->Form->control('category_id', ['options' => $categories, 'empty' => true]);
+            echo $this->Form->control('supplier_id', ['options' => $suppliers, 'empty' => true]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

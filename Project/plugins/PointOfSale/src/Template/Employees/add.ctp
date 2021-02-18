@@ -14,6 +14,7 @@
         <?php
             echo $this->Form->control('name');
             echo $this->Form->control('phone');
+            echo $this->Form->control('address');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

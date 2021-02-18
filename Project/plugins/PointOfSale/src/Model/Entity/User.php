@@ -27,6 +27,7 @@ class User extends Entity
         'Password' => true,
     ];
 
+
     protected function _setPassword($value)
     {
         if (strlen($value)) {

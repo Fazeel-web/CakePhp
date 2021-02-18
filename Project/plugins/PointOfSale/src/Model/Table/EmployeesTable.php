@@ -58,6 +58,12 @@ class EmployeesTable extends Table
             ->requirePresence('phone', 'create')
             ->notEmptyString('phone');
 
+        $validator
+            ->scalar('address')
+            ->maxLength('address', 255)
+            ->requirePresence('address', 'create')
+            ->notEmptyString('address');
+
         return $validator;
     }
 }

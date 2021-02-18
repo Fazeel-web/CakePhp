@@ -20,7 +20,11 @@ if (file_exists($file)) {
     echo ob_get_clean();
 } else {
 ?>
+
+<?= $this->Html->css('loginnnnnnnn') ?> 
+<img src="/Project/img/Capture.jpg" data-src="Capture.jpg" class="img-responsive" style="width:100px; height:50px; border-radius:5px;" alt="">
 <div>
+
 
     <div class="login_wrapper">
 
@@ -33,18 +37,16 @@ if (file_exists($file)) {
                     <div>
                         <?= $this->Form->control('Email') ?>
                     </div>
-                    <div>
-                        <?= $this->Form->control('Password') ?>
+                    <div class="form-group password required">
+                        <label for="password">Password</label>
+                        <input type="password" name="Password" required="required" maxLength="255" id="password" class="form-control">
                     </div>
                     <div>
                         <?= $this->Form->button(__('Submit')) ?>
-                        <button style="border:0px; padding:8px 8px 6px 24px;">
+                        <button >
                             <?= $this->Html->link(__('Login'),['controller' => 'Users','action' => 'login']) ?>
                         </button>
                     </div>
-
-                
-
                     <div class="clearfix"></div>
 
                     <div class="separator">

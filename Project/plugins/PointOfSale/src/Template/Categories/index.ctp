@@ -9,7 +9,7 @@
 
 <div class="categories index large-9 medium-8 columns content">
     <h3><?= __('Categories') ?></h3>
-    <table cellpadding="0" cellspacing="0">
+    <table cellpadding="0" cellspacing="0" class="table w-100">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
@@ -23,7 +23,7 @@
             <tr>
                 <td><?= $this->Number->format($category->id) ?></td>
                 <td style="padding-left:40px;"><?= h($category->name) ?></td>
-                <td style="padding-left:40px;"><?= h($category->description) ?></td>
+                <td style="padding-left:40px; width:60%;"><?= h($category->description) ?></td>
                 <td class="actions"style="padding-left:40px;">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $category->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $category->id]) ?>

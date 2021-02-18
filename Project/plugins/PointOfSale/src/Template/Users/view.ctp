@@ -11,16 +11,12 @@
         <button><?= $this->Html->link(__('New User'), ['action' => 'add']) ?> </button>
 <hr>
 <div class="users view large-9 medium-8 columns content">
-    <h3><?= h($user->id) ?></h3>
-    <table class="vertical-table">
+    <h3 style="text-align:left;">Users Id : <?= h($user->id) ?></h3>
+    <table class="vertical-table table w-100">
         <tr>
             <th scope="row" style="padding-top:15px;"><?= __('Email') ?></th>
             <td style="padding-top:15px; padding-left:15px;"><?= h($user->Email) ?></td>
         </tr>
-        <tr>
-        <tr>
-            <th scope="row" style="padding-top:15px;"><?= __('Id') ?></th>
-            <td style="padding-top:15px; padding-left:15px;"><?= $this->Number->format($user->id) ?></td>
-        </tr>
+
     </table>
 </div>

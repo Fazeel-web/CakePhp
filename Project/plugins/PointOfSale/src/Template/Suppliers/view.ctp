@@ -13,11 +13,11 @@
         <button><?= $this->Html->link(__('New Pro'), ['controller' => 'Pros', 'action' => 'add']) ?> </button>
 <hr>
 <div class="suppliers view large-9 medium-8 columns content">
-    <h3><?= h($supplier->name) ?></h3>
-    <table class="vertical-table">
+    <h3 style="text-align:left;"><?= h($supplier->name) ?></h3>
+    <table class="vertical-table table w-100">
         <tr>
-            <th scope="row" style="padding-top:15px;"><?= __('Name') ?></th>
-            <td style="padding-top:15px; padding-left:15px;"><?= h($supplier->name) ?></td>
+            <th scope="row" class="col-sm-1" style="padding-top:15px;"><?= __('Name') ?></th>
+            <td class="col-sm-11" style="padding-top:15px; padding-left:15px;"><?= h($supplier->name) ?></td>
         </tr>
         <tr>
             <th scope="row" style="padding-top:15px;"><?= __('Phone') ?></th>

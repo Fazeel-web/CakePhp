@@ -9,6 +9,7 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property string $name
  * @property int $phone
+ * @property int $address
  */
 class Employee extends Entity
 {
@@ -24,5 +25,6 @@ class Employee extends Entity
     protected $_accessible = [
         'name' => true,
         'phone' => true,
+        'address' => true,
     ];
 }

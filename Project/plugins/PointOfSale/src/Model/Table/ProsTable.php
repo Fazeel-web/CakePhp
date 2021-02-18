@@ -41,8 +41,13 @@ class ProsTable extends Table
             'foreignKey' => 'category_id',
             'className' => 'PointOfSale.Categories',
         ]);
-        $this->hasMany('Suppliers', [
-            'foreignKey' => 'pro_id',
+        // $this->hasMany('Suppliers', [
+        //     'foreignKey' => 'pro_id',
+        //     'className' => 'PointOfSale.Suppliers',
+        // ]);
+        $this->belongsTo('Suppliers', [
+            'foreignKey' => 'supplier_id',
+            
             'className' => 'PointOfSale.Suppliers',
         ]);
     }
